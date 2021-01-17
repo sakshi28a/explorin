@@ -25,7 +25,7 @@ SECRET_KEY = 'k7z&uhr#7@z$!+h%^=(h!mk*#)o@!mq*4pudv!_@m56=#*r0e1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sakshi28a.explorin.io']
 
 
 # Application definition
@@ -124,4 +124,3 @@ LOGIN_REDIRECT_URL = '/insta/dashboard/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 STATIC_ROOT = BASE_DIR / 'static'
-
