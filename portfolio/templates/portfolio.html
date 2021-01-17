@@ -1,0 +1,345 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	
+<title>Sakshi | portfolio</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+     function myfunc(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+      	new Audio('aud.mp3').play();
+   }
+</script>
+	<style>
+		body{
+			display: flex;
+			background-image:url("https://www.itl.cat/pngfile/big/285-2850227_leaf-wallpaper-hd-dark-leaf-wallpaper-hd.jpg");
+			margin: 50px 50px 50px 50px;
+			min-height: 100vh;
+		}
+		*{
+			padding:0px;
+			font-family: "Poppins", sans-serif;
+		}
+		.master{
+			display: flex;
+			flex-direction: column;
+			width:80vh;
+		}
+		.container{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin:0px 0;
+			/*background-color:#ffe0e9;*/
+			border-radius:100px;
+			background-image: url("https://i.pinimg.com/236x/bd/7b/39/bd7b39e1af9dac05dff21b61c120eab3.jpg");
+			background-repeat: cover;
+			}
+		.card{
+			position: relative;
+			background-color:white;
+			justify-content: center;
+			width:120vh;
+			height:370px;
+			box-shadow: 5px 5px 15px #83C5BE;
+				   	  /*-5px -5px 15px #D4A373;*/
+			border-radius: 15px;
+			margin: auto;
+			margin-bottom: 40px;	
+			border: 2px solid #00509d;
+		}
+		.box{
+			position: absolute;
+			top:20px;
+			left:30px;
+			right:20px;
+			bottom:20px;
+			background:#fae0e4;
+			border-radius :15px;
+			transition: 0.5s;
+			color:black;
+			border: 2px solid pink;
+			box-shadow: 5px 5px 15px pink;
+		}
+		.box:hover{
+			transform: translateY(-30px);
+		}
+		.hey{
+			color:white;
+			font-size: 90px;
+			font-family:sans-serif;
+		}
+		#hi{
+			font-size:30px;
+		}
+		.me{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			}
+		.container2{
+			margin-top: 50px;
+			display: flex; 
+			justify-content:center;
+			justify-content: space-around;
+		}
+		.two{
+			background-color: #f4d8cd;
+		}
+		.navbar {
+		  overflow: hidden;
+		  position: fixed;
+		  background: rgba(0, 0, 0, 0.5);
+		  top: 0;
+		  width: 100%;
+		  right:0%;
+		  padding-right: 20px;
+		  font-family: "montserrat";
+		  z-index : 10;
+		}
+		.navbar a{
+		  float: right;
+		  display: block;
+		  color: #f2f2f2;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		  font-family: "montserrat";
+		  z-index: 10
+		}
+		.navbar a:hover{
+		  background: #ef233c;
+		  color: white;
+		}
+
+		.main{
+		  padding: 16px;
+		  margin-top: 30px;
+		  height: 1500px; 
+		}
+		.btn{
+		  border: 1px solid #DA2317;
+		  background: none;
+		  padding: 10px 20px;
+		  font-size: 20px;
+		  cursor: pointer;
+		  margin: 10px;
+		  transition: 0.8s;
+		  position: relative;
+		  overflow: hidden;
+		  border-radius: 20%;
+		}
+		.btn1{
+		  color: #3498db;
+		}
+		.btn1:hover{
+		  color: #fff;
+		}
+		.btn::before{
+		  content: "";
+		  position: absolute;
+		  left: 0;
+		  width: 100%;
+		  height: 0%;
+		  background: #DA2317;
+		  z-index: -1;
+		  transition: 1s;
+		}
+		.btn1::before{
+		  top: 0;
+		  border-radius: 0 0 50% 50%;
+		}
+		.btn1:hover::before{
+		  height: 180%;
+		}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<img src="https://explorin.io/static/img/logo.png" style="align:left; margin-left: 30px; background: white;" width="10%" height="16%">
+  <a class="btn btn1" href="#contact">Contact Me</a>
+  <a class="btn btn1" href="#projects">Projects</a>
+  <a class="btn btn1" href="#home">About Me</a>
+  <a class="btn btn1" href="#home">Home</a>
+  <a class="btn btn1" href="http://127.0.0.1:8000/insta/register/">Master Project</a>
+</div>
+<div class="master" style="background-color:; background-repeat:repeat; width:80%; height:100%; margin:auto;" id="home">
+	<div class="me" style=" margin:1px;"> 
+			<div class="one" style="height: 620px; width:100%; margin:5px; margin-top: 20px; margin-left:20px;"> <img src="{% static './myimage.jpeg' %}" height="622px" style="margin-left: 70px;">
+			</div>	
+			<div class="two" style="height: 620px; width: 100%; margin:5px;	margin-top: 20px; margin-right:95px;"><pre>
+<p style="font-size: 22px; color:black;"><b>                                Heyaa!
+  		     I am Sakshi Singla </p></pre></b>
+				 <pre style="text-align: left; font-size: 18px; color:black;"><b>
+     Being an IT student, I enjoy learning about the 
+     breakthrough in technology. I like attending 
+     professional workshops about the ‘new technologies’.
+     I portray excellent interpersonal skills, which help 
+     me carry out the responsibility of leading 
+     groups at places.
+
+     First things first, regarding my academic
+     qualification:
+	 
+	    <b>College</b> :<u>Panjab University, Chandigarh</u>
+	    My scholastic achievements:
+	  	<b>10th</b> : 10 CGPA 
+	 	<b>12th</b> : 90% 
+	 
+	 I've always been a leading kinda personality from 
+	 my schooltime itself, I love hosting events since 
+	 then, I also like playing chess and outdoor games
+	 like badminton etc.I have a knack of reading 
+	 pyschological books.</b></pre></div>
+			<br> <br> <br>
+	</div> <br> <br>
+		<button onclick="myfunc('explore');" style="left:50% ;text-align: left; padding: 15px 32px; cursor: pointer; width:30%;display: inline-block;border-radius: 4px;">Click for the surprise!</button>
+	<div class="container" style="width:100%; height: 20%; margin-top: 10px;">
+		
+		<br> <br> <br>
+
+	<div class="explorin" style="font-size:25px; border-radius:50px;display: none" id="explore"><pre id="shruti" style="background:#fae0e4;
+	padding:3px;">
+	<b style="font-size:30px; font-family:audrey;">EXPLORIN</b> has absolutely changed my perspective towards the options wrt my career.
+	
+	I was quite unsure earlier about getting engaged in software and was feeling quite out of 
+	direction, it's been a great experience to have joined such a good platform like 
+	Explorin that has given me a direction and a path I think I can head to. I would surely 
+	recommend it to anyone who's quite confused and is jumbled up with the most common 
+	question : "What should i do!"
+
+	I am extremely grateful to be a part of such an amazing community.Being under your supervision 
+	has been an amazing experience. 
+        Thank you for seeing the potential in me and giving the opportunity to work with you. 
+        Your encouragement and support is thoroughly worthy. </pre>
+	
+	</div> 
+	<pre> <h1 style="font-family:Audrey; color:black;"><b><i>     <u>PROJECTS:</b></i></u></h1></pre>
+		<div class="card" style="margin-top: 35px;" id="projects">
+			<div class="box">
+				<pre><h1> <a href="./flex" style="color:black;">FLEXBOX </pre> </h1></a>
+				<hr><br>
+				<pre style="font-size:18px">
+<b>Description:</b>                     Make a flexbox and add the CSS styling to it.
+
+<b>Technologies Used:</b>        HTML
+				          CSS
+
+<b>Time taken:</b>                      1 day
+			</div>
+		</div>
+		<div class="card">
+			<div class="box">
+				<pre><h1> <a href="./bill" style="color:black;">BASIC BILL SPLITTER </a></pre></h1>
+				<hr><br>
+				<pre style="font-size:18px">
+<b>Description:</b>                     Make a basic bill splitter app. 
+
+<b>Technologies Used:</b>        HTML
+		                          CSS 
+		                          JS
+
+<b>Time taken:</b>                      1 day
+				</div>
+		</div>
+		<div class="card">
+			<div class="box">
+				<pre><h1> <a href="./weekly1" style="color:black;">MY FIRST WEBSITE | Thanks to <b>EXPLORIN!</b></a> </pre> </h1>
+				<hr><br>
+				<pre style="font-size:18px;">
+<b>Description:</b> 			 Made my first ever website. 
+
+<b>Technologies Used:</b>       HTML
+                                         CSS
+                                         JS
+
+<b>Time taken:</b>                     1 day
+			</div>
+		</div>	
+		<div class="card">
+			<div class="box">
+				<pre><h1> <a href="{% static './sql.jpeg' %}" style="color:black;">SQL </pre></a></h1>
+				<hr><br>
+				<pre style="font-size:18px;">
+<b>Description:</b>                    Working with databases to make accordians.
+
+<b>Technologies Used:</b>       MySQL
+
+<b>Time taken:</b>                     1 day
+				</div>
+		</div>
+		<div class="card">
+			<div class="box">
+				<pre><h1> <a href="./trial12" style="color:black;">FLEXBOX ADVANCE </pre></a></h1>
+				<hr><br>
+				<pre style="font-size:18px;">
+<b>Description:</b>                   Playing with flexbox using JQuery 
+
+<b>Technologies Used:</b>      JQuery
+
+<b>Time taken:</b>                    1 day
+			</div>
+		</div>
+		<div class="card">
+			<div class="box">
+				<pre><h1> <a href="./accordian" style="color:black;">Accordian </pre></a></h1>
+				<hr><br>
+				<pre style="font-size:18px;">
+<b>Description:</b>               	 To make accordians.
+
+<b>Technologies Used:</b>       MySQL
+
+<b>Time taken:</b>                     1 day
+				</div>
+		</div>
+		<div class="card">
+			<div class="box">
+				<pre><h1> <a href="https://drive.google.com/file/d/1fq7EAvpmnw77XmxJdbz4uJ3XmnYZJ0F2/view?usp=sharing" style="color:black;">My First Login Page </pre></a></h1>
+				<hr><br>
+				<pre style="font-size:18px;">
+<b>Description:</b>                    Make an active login page for users. 
+
+<b>Technologies Used:</b>       PhP
+
+<b>Time taken:</b>                     1 day</pre>
+			</div>
+		</div>
+	</div>
+
+<div class="footer" style="color:white;" id="contact">
+	<div class="container1" style="color:white"><b>
+	<pre style="font-size: 40px; margin-top: 90px;font-style:all;"><b>   Contact</b></pre>
+	<pre style="font-size:20px; ">       If you desire to contact me, you can reach me via:</pre>
+	<pre style="font-size: 22px;">
+		Email: <a href="" style="color:white">@sakshisingla2108@gmail.com</a>
+		Instagram: <a href="" style="color:white;">https://www.instagram.com/sakshi_singla.7162/?hl=en</a>
+		Linkedin: <a href="" style="color:white;">https://www.linkedin.com/in/sakshi-singla-3b4b461a9/</a></b>
+	
+    </div>
+    <div class="container2">
+    	<div class="gmail">
+    		<a href="mailto:sakshisingla2108@gmail.com"><img src="{% static './google.png' %}" height="50px" width="50px";>
+    	</div>
+    	<div class="linkedin">
+    		<a href="https://www.linkedin.com/in/sakshi-singla-3b4b461a9/"><img src="{% static './linkedin.png' %}" height="50px" width="50px";>
+    	</div>
+    	<div class="instagram">
+    		<a href="https://www.instagram.com/sakshi_singla.7162/?hl=en"><img src="{% static './instagram.png' %}" height="50px" width="50px";>
+    	</div>
+    	<div class="twitter">
+    		<a href=""><img src="{% static './twitter.png' %}" height="50px" width="50px";>
+    	</div>
+    </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sakshi</title>
+	<style>
+		body{
+	background-color:#333333;
+}
+.master{
+	display: flex;
+	justify-content: space-around;
+}
+.hero{
+	display: flex;
+	justify-content: space-around;	
+}
+.yup{
+	display: flex;
+	justify-content: center;
+}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+	<script>
+		$(document).ready(function(){
+  			$(".one").click(function(){
+    		$(".aone").slideToggle("slow");
+  			});
+  			$(".two").click(function(){
+    		$(".atwo").slideToggle("slow");
+  			});
+  			$(".three").click(function(){
+    		$(".athree").slideToggle("slow");
+  			});
+  			$(".four").click(function(){
+    		$(".afour").slideToggle("slow");
+  			});
+ 		});
+	</script>
+</head>
+<body>
+	<div style="background-color:grey; color: white; font-size: 25px; padding: 0px; text-align: center; font-family: fantasy; display:flex;">
+	<h1> INSPIRING ENGLIGHTENING QUOTES </h1>
+</div>
+<hr>
+<hr>
+<p style="text-align:center; font-size: 25px; color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+<hr>
+<hr>
+<h1 style="color: grey; text-align: center; font-size: 40px;"> Creative quotes from enlightening thinkers </h1>
+<hr>
+<hr>
+<br>
+<div class="master" style="background-color: #333333; color: white;">
+	<div class="one" style="background-color: #E60550; font-size: 45px;" > ARTISTS
+<pre class="aone" style="background-color: white; color: black; font-size: 34px; margin:1px; margin-bottom: 28px;">
+Vincent Van Gogh
+Pablo Picasso
+William Blake
+Edward Hopper
+Francis Bacon
+Andy Warhol
+</pre>	
+	</div>
+	<div class="two" style="background-color:#F96B00; font-size: 45px;"> PHILOSOPHERS
+<pre class="atwo" style="background-color: white;color: black; font-size: 34px; margin:1px;">
+David Hume
+Immanuel Kant
+Arthur Schopenhauer
+Friedrich Nietzsche
+Bertrand Russell
+Ludwig Wittgenstein
+</pre>
+	</div>
+	<div class="three" style="background-color:#5b63fe; font-size: 45px;"> WRITERS
+<pre class="athree" style="background-color: white;color: black; font-size: 34px; margin:1px;">
+T.S Eliot
+John Berger
+Isaiah Berlin
+Karen Armstrong
+Arundhati Roy
+Alain de Botton
+</pre>
+	</div>
+	<div class="four" style="background-color:#71EEB8; font-size: 45px;"> SCIENTISTS
+<pre class="afour" style="background-color: white;color: black; font-size: 34px; margin:1px">
+Galileo Galilei
+Albert Einstein
+Charles Darwin
+Max Planck
+Erwin Schrodinger
+Daniel Dennett
+</pre>
+	</div>
+</div> 
+<br>
+<hr>
+<hr>
+	<div class="yup" style="background-color:#181818; font-size: 30px; text-align: center;">
+		<div style="color:white; border:1px solid white; font-size: 30px; flex:1;"> ABOUT THIS SITE 
+			<p style="color:#FF007F;"> This site showcases my favourite quotes from a bunch of intellectuals who have changed the way I think. The site is also an experiment with HTML5, CSS3 & media queries. You can read about it over at my blog for sure very positively » </p>
+		</div>
+		<div style="color:white; border:1px solid white;  font-size: 30px; flex: 1;"> WEEKLY EMAIL 
+			<p style="color:#FF007F;"> Interested in receiving enlightening quotes straight to your inbox? Receive six interesting quotes from an artist, philosopher, writer or scientist every Friday! Sound good to you? Go ahead, sign yourself up » </p>
+		</div>
+	</div>
+	<br>
+	<img src="https://i.pinimg.com/236x/48/36/49/4836496ee8ca60167229000a5bdcf8fe.jpg" style="display: block; margin: 0 auto; width:60vh; height: 35vh;">
+</body>
+</html>

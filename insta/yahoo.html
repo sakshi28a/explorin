@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	.button {
+	  border: none;
+	  color: white;
+	  background: blue;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	  border-radius: 10%
+	}
+</style>
+</head>
+<body>
+
+<button class="button" value="Follow">Follow</button>
+<script type="text/javascript">
+	document.querySelector("button").addEventListener("click",
+		function(){
+			if (document.querySelector("button").style.background == 'blue'){
+				document.querySelector("button").style.background = "#2ecc71";
+				document.querySelector("button").style.color = "red";
+				document.querySelector("button").value = "Unfollow";
+				document.querySelector("button").innerHTML = "Unfollow";
+			}
+			else{
+				document.querySelector("button").style.background = "blue";
+				document.querySelector("button").style.color = "white";
+				document.querySelector("button").value= "Follow";
+				document.querySelector("button").innerHTML= "Follow";
+
+			}
+		})
+</script>
+</body>
+</html>

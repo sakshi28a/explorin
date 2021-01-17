@@ -1,0 +1,285 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title></title>
+    <style>
+      nav ul li a{
+	color:#1d3557;
+	font-size:25px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+a.active,a:hover{
+	background: #f1faee;
+	transition-duration : 0.5s;
+}
+.checkbtn{
+	font-size: 30px;
+	color:white;
+	float:right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor:pointer;
+	display:none;
+}
+#check{
+	display: none;
+}
+@media (max-width: 952px){
+	label.logo{
+		font-size: 30px;
+		padding-left: 50px;
+	}
+	nav ul li a{
+		font-size: 16px;
+	}
+}
+.dropdown:hover .dropdown-content {display: block;}
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+                 .me{border: none;
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 6px;
+                    cursor: pointer;
+                    outline: none;
+                    border-radius: 5px;
+                 }
+                 .okay,.yeah{
+                    background-color: #2ecc71; /* Green */
+                    border: none;
+                    text-decoration: none;
+                    display: inline-block;
+                    color: white;
+                    transition-duration: 0.4s;
+                    border-radius: 5px;
+                    padding: 5px;
+                    cursor: pointer;
+                    outline: none;
+                 }
+                 .okay,.yeah{
+                    background-color:#2ecc71; 
+                    border: 2px solid #2ecc71;
+                    }
+
+                 .okay:hover,.yeah:hover {
+                    background-color: #32de84;
+                 }
+                 .button {
+                  border: none;
+                  color: white;
+                  background: blue;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                  border-radius: 10%;
+	}
+
+    </style>
+  </head>
+  <body>
+    <nav style="background:#0082e6; height:60px; width:100%;padding:0px;margin: 0px;text-decoration:none;box-sizing:border-box;list-style: none;">
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn"></label>
+        <i class="far fa-bars"></i>
+      <label class="logo" style="color:white;font-size:35px;line-height: 62.35px;padding: 0 100px;font-weight:bold;"><div style="margin-top:-6.2px;"></div><img src="https://www.pngkey.com/png/full/828-8286178_mackeys-work-needs-no-elaborate-presentation-or-distracting.png" width="150vh" height="80vh"></label></div>
+        <ul style="float:right;margin-right: 20px;">
+          <li style="display: inline-block;line-height: 60px;margin:0 5px;"><a class="active" href="http://127.0.0.1:8000/insta/dashboard/"><img src="https://www.flaticon.com/svg/static/icons/svg/25/25694.svg" width="40vh" height="60vh">Home</a></li>
+          <li style="display: inline-block;line-height: 60px;margin:0 5px;"><a href="http://127.0.0.1:8000/insta/editprofile/"><img src="https://cdn3.iconfinder.com/data/icons/instagram-18/512/186_Instagram_Compass_Navigation-512.png" width="40vh" height="60vh">Edit</a></li>
+          <li style="display: inline-block;line-height: 60px;margin:0 5px;"><a href="#"><img src="https://cdn.iconscout.com/icon/free/png-256/favorite-border-1781521-1513841.png" width="40vh" height="50vh"></a></li>
+          <li style="display: inline-block;line-height: 60px;margin:0 5px;"><a href="http://127.0.0.1:8000/insta/home/"><img src="https://static.thenounproject.com/png/17241-200.png" width="40vh" height="50vh">Profile</a></li>
+          <li id="setting" style="display: inline-block;margin:0 5px;"><a href="http://127.0.0.1:8000/insta/login/"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Windows_Settings_app_icon.png" width="40vh" height="10vh">Logout</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Welcome, {{user.username}} </h1>
+
+    <section class="section">
+      <div class="container">
+
+        <article class="media">
+          
+          <div class="media-left">
+        <figure class="image is-256x256">
+          <img class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png">
+        </figure>
+    </div>
+
+    <div class="media-content">
+      <h2 class="title is-2" style="font-weight: bold;">  @username </h2>
+      <h2 class="subtitle is-4"> name </h2><br>
+
+      
+      <div class="hi" style="font-size: 20px;">
+        {% for x in obj reversed %}
+            {% if forloop.first %}
+                <p>{{ x.name }}</p>
+            {% endif %}
+        {% endfor %}
+      </div>
+
+      <button class="button" value="Follow">Follow</button>
+<script type="text/javascript">
+	document.querySelector("button").addEventListener("click",
+		function(){
+			if (document.querySelector("button").style.background == 'blue'){
+				document.querySelector("button").style.background = "#2ecc71";
+				document.querySelector("button").style.color = "red";
+				document.querySelector("button").value = "Unfollow";
+				document.querySelector("button").innerHTML = "Unfollow";
+			}
+			else{
+				document.querySelector("button").style.background = "blue";
+				document.querySelector("button").style.color = "white";
+				document.querySelector("button").value= "Follow";
+				document.querySelector("button").innerHTML= "Follow";
+
+			}
+		})
+</script><br><br>
+
+      <div>
+  			<form action="" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="file" name="photo" accept="image/*" id="id_photo"><br><br>
+          <label for="id_title">Title:</label>
+          <input type="text" name="title" maxlength="300" id="id_title"><br><br>
+          <label for="id_body">Body:</label>
+          <input type="text" name="body" maxlength="1000" id="id_body"><br><br>
+          
+
+  				<input type="submit" class="okay" value="Add post">
+          
+  			</form>
+  		</div>
+    
+  </div>
+
+  <div class="navbar-end">
+
+  <nav class="level-right">
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Tweets</p>
+        <p class="title">3,456</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Following</p>
+        <p class="title">123</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Followers</p>
+        <p class="title">456K</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Likes</p>
+        <p class="title">789</p>
+      </div>
+    </div>
+  </nav>
+
+</div>
+
+</article>
+
+<div>
+  <p class="subtitle is-5"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+</div>
+
+<div class="tabs is-centered">
+  <ul>
+    <li class="is-active"><a>Posts</a></li>
+    <li><a>Explore</a></li>
+    <li><a>Add Post</a></li>
+    <li><a>Liked</a></li>
+    <li><a>Tagged</a></li>
+  </ul>
+</div>
+
+<div class="sexycontainer3" style="display: flex; flex-direction: row;">
+  <div class="row" style="width: 625px; border-width: 2px; margin-left: 70px;">
+    {% for x in img %}
+    <div class="card m-3">
+      <small class="" style="font-size: 20px; text-align: center;">{{x.title}}</small>
+      <center>
+      <img src="{{x.photo.url}}" alt="" class="card" height="400px" width="600px">
+      </center>
+      <div class="card-footer">
+      <small class="text-muted" style="text-align: center;">{{x.body}}</small><br>
+      <div class="hitcontainer" style="display: flex; flex-direction:row; justify-content: space-between;">
+        <form action="/insta/like/" method="post">
+          {% csrf_token %}
+          <input type="text" name="image_id" value="{{x.id}}" style="display:none;">
+          <button type="submit" style="background-color:#c81d25; color:white; margin-right:4px;" class="me">Like</button>
+        </form>
+        <br>
+        <form action="/insta/unlike/" method="post">
+          {% csrf_token %}
+          <input type="text" name="image_id" value="{{x.id}}" style="display: none;">
+          <button type="submit" style="background-color:#00b4d8; color:white;" class="me">Unlike</button>
+        </form>
+      </div>
+      <p>Likes: {{x.likes.count}}</p>
+      <p>Unlikes: {{x.unlikes.count}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+  </div>  
+</section>
+
+  </body>
+</html>
+{% endblock %}
+

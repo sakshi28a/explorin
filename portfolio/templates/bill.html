@@ -1,0 +1,62 @@
+{% load static %}
+<html>
+<head>
+	<style>
+		body{
+			text-align:center;
+			background-color:#1D3557;
+			color: white;		
+		}
+		#container {
+			height:525px;
+			width:360px;
+			margin:100px auto;
+			background-color:#E63946;
+			border-radius: 20px;
+		}
+		#billamt {width:50%;padding:5px 5px 8px 8px;}
+		#peopleamt {width:50%padding:5px 5px 8px 8px;}
+
+		button{
+			display: inline-block;margin:30px auto;background:#457B9D;border-radius:5px;width:200px;height:50px;font-size:17px;color:white;}
+			button:hover{
+				background:#A8DADC;border-bottom-color:blue;
+			}
+			#totalSplitAmount{
+				font-size:16px;
+				margin-top:5px
+				text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h1><br>Amount Calculator</h1>
+			<div id="calculator">
+				<br>
+				<form>
+					<p>ENTER BILL AMOUNT!
+						<br> <br>
+						<input id="billamt" type="text" placeholder="bill amount">
+					</p>
+					<p>Number of people to pay the bill? <br> <br>
+						<input id ="peopleamt" type="text" placeholder="No. of people(def. 1)">
+					</p>
+				</form>
+				<button type="button" onclick="calculateTip();">CALCULATE</button>
+			</div>
+			<div id ="totalSplitAmount">
+				Çontribution Per Person =$<span id="totalSplitAmount_each">0.00</span>
+			</div>
+		</div>
+<script>
+	//calculatr tip
+	function calculateTip(){
+		var billAmt = document.getElementById("billamt").value;
+		var numOfPeople = document.getElementById("peopleamt").value;
+		var totalBill = (billAmt)/numOfPeople;
+		document.getElementById("totalSplitAmount").style.display="block";
+		document.getElementById("totalSplitAmount_each").innerHTML = totalBill;}
+	</script>
+</body>
+</html>

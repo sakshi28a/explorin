@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .one input[type = "text"]{
+                    border:0;
+                    border: 2px solid #3498db;
+                    outline:none;
+                    color:black;
+                    transition-duration:0.25s;
+                 }
+                 .one input[type = "text"]:focus{
+                     border-color: #2ecc71;
+                 }
+        .hi{
+                    background-color: #2ecc71; /* Green */
+                    border: none;
+                    text-decoration: none;
+                    display: inline-block;
+                    transition-duration: 0.4s;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    outline: none;
+                 }
+                 .hi{
+                    background-color:#2ecc71; 
+                    border: 2px solid #2ecc71;
+                    }
+
+                 .hi:hover {
+                    background-color: #32de84;
+                 }
+    </style>
+</head>
+<body style="background-color: #f8f8ff;">
+	<center>
+    {%block content%}
+    <div>
+        <img src="https://explorin.io/static/img/logo.png" width="180vh">
+    </div>
+	<div class="one" style="background-color:white; width:48vh;height:70vh;border:1px solid #ced4da;align-items:center;margin:auto;margin-top:6vh;text-align: center;margin-bottom:3vh;">
+	<img src="https://assets.stickpng.com/images/5a4e432a2da5ad73df7efe7a.png" width="190vh"height="85vh" style="margin-top:2.5vh;"><br><br>
+	<img src="https://static.thenounproject.com/png/17241-200.png" height="150px;"><br><br>
+		<form action="" method="POST">
+			{% csrf_token %}
+			<div style="font-size: 20px; color: ; font-style: monsterrat;">EDIT YOUR USERNAME HERE.</div><br><br>
+			<input type="text" name="name" maxlength="300" id="id_name" placeholder="Username" style="width:70%; padding:9px;"><br><br>
+			<input type="submit" name="" class="hi" value="Change" style="size: 20px; padding:10px; width:80%; color: white;">
+		</form><br>
+        <hr width="50%">
+        <hr width="30%">
+	</div>
+	{% endblock %}
+	</center>
+</body>
+</html>
+

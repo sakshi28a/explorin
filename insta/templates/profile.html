@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+{% block content %}
+<html lang="en">
+  <head>    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            background-image: url("https://www.itl.cat/pngfile/big/285-2850227_leaf-wallpaper-hd-dark-leaf-wallpaper-hd.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .hmm{
+            background-color: #2ecc71; /* Green */
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            transition-duration: 0.4s;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+            border: 2px solid #2ecc71;
+        }
+        .hmm:hover {
+                    background-color: #32de84;
+                 }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  </head>
+    <body>
+
+        <center>
+            <br>
+        <img src="https://www.pngkey.com/png/full/828-8286178_mackeys-work-needs-no-elaborate-presentation-or-distracting.png" height="70vh;">
+        </center>
+        <div class="hitcontainer2" style="text-align: center; font-size: 40px; color: white;">
+        {% for x in obj reversed %}
+            {% if forloop.first %}
+                <p style="color:white;"><b> Welcome {{ x.name }} </b></p>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div class="hitcontainer1" style="font-size: 30px; display: flex; justify-content: center; ">
+        <a href="{% url 'edit' %}" class="hmm" style="color:white; padding: 10px; font-size:20px;">Edit Profile</a>
+        </div>
+        <div class="sexycontainer3" style="display: flex; flex-direction: row; justify-content: center;">
+        <div class="row" style="width: 810px; border-width: 2px;">
+            {% for x in img %}
+                <div class="card m-3">
+                    <center>
+                    <img src="{{x.photo.url}}" alt="" class="card" height="800px" width="700px">
+                    </center>
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
+{% endblock %}
